@@ -1,0 +1,385 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "433e7513",
+   "metadata": {},
+   "source": [
+    "# Practicle Assignment 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2d707cfc",
+   "metadata": {
+    "vscode": {
+     "languageId": "plaintext"
+    }
+   },
+   "source": [
+    "### 1. Check the given number is odd or even"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "fd9319e6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "864563 is Odd\n"
+     ]
+    }
+   ],
+   "source": [
+    "def oddEven(userInput):\n",
+    "  if (userInput % 2) == 0:\n",
+    "    print(f\"{userInput} is Even\")\n",
+    "  else:\n",
+    "    print(f\"{userInput} is Odd\")\n",
+    "\n",
+    "userInput = int(input(\"Enter an Integer\"))\n",
+    "oddEven(userInput)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c99b36a7",
+   "metadata": {},
+   "source": [
+    "### 2. Count the total number of digits in a number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "9f7abc6a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Lenght of entered number is 9\n"
+     ]
+    }
+   ],
+   "source": [
+    "def digitCount(num):\n",
+    "  print(f\"Lenght of entered number is {len(num)}\")\n",
+    "\n",
+    "userInput = int(input(\"Enter an Integer\"))\n",
+    "digitCount(str(userInput))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a2b4afba",
+   "metadata": {},
+   "source": [
+    "### 3. Write a Python program to print the reverse number pattern using a for loop"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "898bccd5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5 4 3 2 1 \n",
+      "4 3 2 1 \n",
+      "3 2 1 \n",
+      "2 1 \n",
+      "1 \n"
+     ]
+    }
+   ],
+   "source": [
+    "def reverseNumberPattern(n):\n",
+    "    for i in range(n, 0, -1):\n",
+    "        for j in range(i, 0, -1):\n",
+    "            print(j, end=\" \")\n",
+    "        print()\n",
+    "\n",
+    "userInput = int(input(\"Enter an Integer\"))\n",
+    "reverseNumberPattern(userInput)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5f5ac25d",
+   "metadata": {},
+   "source": [
+    "### 4. Print all prime numbers within a range"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "82a98379",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2 3 5 7 11 13 17 19 23 29 "
+     ]
+    }
+   ],
+   "source": [
+    "def isPrime(num):\n",
+    "    if num < 2:\n",
+    "        return False\n",
+    "    for i in range(2, int(num ** 0.5)+1):\n",
+    "        if num % i == 0:\n",
+    "            return False\n",
+    "    return True\n",
+    "\n",
+    "def primeRange(start, end):\n",
+    "    for i in range(start, end+1):\n",
+    "        if isPrime(i):\n",
+    "            print(i, end=\" \")\n",
+    "\n",
+    "lowerLimit = int(input(\"Enter an integer as Lower Limit\"))\n",
+    "upperLimit = int(input(\"Enter an integer as Upper Limit\"))\n",
+    "primeRange(lowerLimit, upperLimit)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3e352096",
+   "metadata": {},
+   "source": [
+    "### 5. Find the factorial of a given number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "7d337cbc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Factorial of 5 is 120\n"
+     ]
+    }
+   ],
+   "source": [
+    "def factorial(n):\n",
+    "    fact = 1\n",
+    "    for i in range(1, n+1):\n",
+    "        fact *= i\n",
+    "    print(f\"Factorial of {n} is {fact}\")\n",
+    "\n",
+    "userInput = int(input(\"Enter an integer to find the factorial of\"))\n",
+    "factorial(userInput)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "be28c10f",
+   "metadata": {},
+   "source": [
+    "### 6. Program to check if number is palindrome"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "32f95808",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "151445455511 is Not a Palindrome\n"
+     ]
+    }
+   ],
+   "source": [
+    "def isPalindrome(num):\n",
+    "    if str(num) == str(num)[::-1]:\n",
+    "        print(f\"{num} is a Palindrome\")\n",
+    "    else:\n",
+    "        print(f\"{num} is Not a Palindrome\")\n",
+    "\n",
+    "userInput = int(input(\"Enter an integer to check if its a palindrome\"))\n",
+    "isPalindrome(userInput)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d92f9098",
+   "metadata": {},
+   "source": [
+    "### 7. Program to Check Armstrong Number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "fcb4d7a9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6 is an Armstrong Number\n"
+     ]
+    }
+   ],
+   "source": [
+    "def isArmstrong(num):\n",
+    "    power = len(str(num))\n",
+    "    total = sum(int(d)**power for d in str(num))\n",
+    "    if total == num:\n",
+    "        print(f\"{num} is an Armstrong Number\")\n",
+    "    else:\n",
+    "        print(f\"{num} is Not an Armstrong Number\")\n",
+    "\n",
+    "userInput = int(input(\"Enter an integer to check if its an Armstrong Number\"))\n",
+    "isArmstrong(userInput)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "baa44ee2",
+   "metadata": {},
+   "source": [
+    "### 8. Find Maximum of three numbers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "160e9178",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[49, 293, 23]\n",
+      "Maximum number is 293\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findMax(nums):\n",
+    "    maximum = max(nums)\n",
+    "    print(f\"Maximum number is {maximum}\")\n",
+    "\n",
+    "nums = []\n",
+    "for _ in range(3):\n",
+    "    nums.append(int(input(f\"Enter number {_ + 1}\")))\n",
+    "   \n",
+    "findMax(nums)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "91ffa1ad",
+   "metadata": {},
+   "source": [
+    "### 9. Find the Sum of digits"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "dfaf6f0a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The sum of digits of 123 is 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "def digitSum(num):\n",
+    "  sum = 0\n",
+    "  for digit in str(num):\n",
+    "    sum = sum + int(digit)\n",
+    "  print(f\"The sum of digits of {num} is {sum}\")\n",
+    "\n",
+    "num = input(\"Enter a number to find the sum of \")\n",
+    "digitSum(num)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3eafe9ee",
+   "metadata": {},
+   "source": [
+    " ### 10. Python Program to Print the Natural Numbers Summation Pattern\n",
+    "Given a natural number n, the task is to write a Python program to first find the sum of first n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "a7c17844",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 = 1\n",
+      "1 + 2 = 3\n",
+      "1 + 2 + 3 = 6\n",
+      "1 + 2 + 3 + 4 = 10\n",
+      "1 + 2 + 3 + 4 + 5 = 15\n"
+     ]
+    }
+   ],
+   "source": [
+    "def naturalSumPattern(n):\n",
+    "    total = 0\n",
+    "    for i in range(1, n+1):\n",
+    "        total += i\n",
+    "        pattern = \" + \".join(str(j) for j in range(1, i+1))\n",
+    "        print(f\"{pattern} = {total}\")\n",
+    "\n",
+    "naturalSumPattern(5)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

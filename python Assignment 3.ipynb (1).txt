@@ -1,0 +1,696 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "9ffaf9dd",
+   "metadata": {},
+   "source": [
+    "# Practical Assignment 3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7b546098",
+   "metadata": {},
+   "source": [
+    "## Basic Set Programs"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "424f8f8b",
+   "metadata": {},
+   "source": [
+    "### 1. Create a set and display its elements"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "334e5ad8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "List: [10, 20, 30, 40, 50]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def createAndPrintList():\n",
+    "    numbers = [10, 20, 30, 40, 50]\n",
+    "    print(\"List:\", numbers)\n",
+    "\n",
+    "createAndPrintList()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c3130d2",
+   "metadata": {},
+   "source": [
+    "### 2. Add an element to a set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "3b422ca8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Length of list: 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findListLength(myList):\n",
+    "    print(\"Length of list:\", len(myList))\n",
+    "\n",
+    "findListLength([5, 10, 15, 20])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c71c46d",
+   "metadata": {},
+   "source": [
+    "### 3. Remove an element from a set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "707f2021",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Min: 1\n",
+      "Max: 9\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findMinMax(myList):\n",
+    "    print(\"Min:\", min(myList))\n",
+    "    print(\"Max:\", max(myList))\n",
+    "\n",
+    "findMinMax([3, 8, 1, 6, 9])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "131990bf",
+   "metadata": {},
+   "source": [
+    "### 4. Clear all elements from a set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "da2c3329",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "apple\n",
+      "banana\n",
+      "cherry\n"
+     ]
+    }
+   ],
+   "source": [
+    "def printAllElements(myList):\n",
+    "    for item in myList:\n",
+    "        print(item)\n",
+    "\n",
+    "printAllElements([\"apple\", \"banana\", \"cherry\"])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b589a204",
+   "metadata": {},
+   "source": [
+    "### 5. Copy a set to another set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "9bf99258",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Copied List: [1, 2, 3, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def copyList(originalList):\n",
+    "    copiedList = originalList[:]\n",
+    "    print(\"Copied List:\", copiedList)\n",
+    "\n",
+    "copyList([1, 2, 3, 4])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f492ed83",
+   "metadata": {},
+   "source": [
+    "### 6. Check if an element exists in a set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "fa994284",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20 exists in the list\n"
+     ]
+    }
+   ],
+   "source": [
+    "def checkElementExists(myList, element):\n",
+    "    if element in myList:\n",
+    "        print(f\"{element} exists in the list\")\n",
+    "    else:\n",
+    "        print(f\"{element} does not exist in the list\")\n",
+    "\n",
+    "checkElementExists([10, 20, 30], 20)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9c6537f6",
+   "metadata": {},
+   "source": [
+    "### 7. Find the length of a set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "4f5e5327",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Largest number: 12\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findLargest(myList):\n",
+    "    print(\"Largest number:\", max(myList))\n",
+    "\n",
+    "findLargest([5, 12, 3, 9])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ea559209",
+   "metadata": {},
+   "source": [
+    "### 8. Iterate through a set using a loop"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "d7a7d314",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Reversed List: [5, 4, 3, 2, 1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def reverseList(myList):\n",
+    "    reversedList = myList[::-1]\n",
+    "    print(\"Reversed List:\", reversedList)\n",
+    "\n",
+    "reverseList([1, 2, 3, 4, 5])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "779ac428",
+   "metadata": {},
+   "source": [
+    "## Set Operations"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1c806084",
+   "metadata": {},
+   "source": [
+    "### 9. Find the union of two sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "31e3dc6d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Union: {1, 2, 3, 4, 5}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findSetUnion(setA, setB):\n",
+    "    unionSet = setA | setB\n",
+    "    print(\"Union:\", unionSet)\n",
+    "\n",
+    "findSetUnion({1, 2, 3}, {3, 4, 5})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8ba3d737",
+   "metadata": {},
+   "source": [
+    "### 10. Find the intersection of two sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "6c40765b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Intersection: {2, 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findSetIntersection(setA, setB):\n",
+    "    intersectionSet = setA & setB\n",
+    "    print(\"Intersection:\", intersectionSet)\n",
+    "\n",
+    "findSetIntersection({1, 2, 3}, {2, 3, 4})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d703ade7",
+   "metadata": {},
+   "source": [
+    "### 11. Find the difference between two sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "c631a9a7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Difference (A - B): {1, 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findSetDifference(setA, setB):\n",
+    "    differenceSet = setA - setB\n",
+    "    print(\"Difference (A - B):\", differenceSet)\n",
+    "\n",
+    "findSetDifference({1, 2, 3}, {2, 4})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b92cfb27",
+   "metadata": {},
+   "source": [
+    "### 12. Find the symmetric difference between two sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "9276ee89",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Symmetric Difference: {1, 3, 4, 5}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findSymmetricDifference(setA, setB):\n",
+    "    symDiffSet = setA ^ setB\n",
+    "    print(\"Symmetric Difference:\", symDiffSet)\n",
+    "\n",
+    "findSymmetricDifference({1, 2, 3}, {2, 4, 5})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "750693aa",
+   "metadata": {},
+   "source": [
+    "### 13. Check if one set is a subset of another"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "189b2a97",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A is subset of B: True\n"
+     ]
+    }
+   ],
+   "source": [
+    "def isSubset(setA, setB):\n",
+    "    print(\"A is subset of B:\", setA.issubset(setB))\n",
+    "\n",
+    "isSubset({1, 2}, {1, 2, 3})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "820663c5",
+   "metadata": {},
+   "source": [
+    "### 14. Check if one set is a superset of another"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "8b0d69a5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A is superset of B: True\n"
+     ]
+    }
+   ],
+   "source": [
+    "def isSuperset(setA, setB):\n",
+    "    print(\"A is superset of B:\", setA.issuperset(setB))\n",
+    "\n",
+    "isSuperset({1, 2, 3}, {1, 2})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "44186097",
+   "metadata": {},
+   "source": [
+    "### 15. Check if two sets are disjoint"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "4b26d76b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sets are disjoint: True\n"
+     ]
+    }
+   ],
+   "source": [
+    "def areDisjoint(setA, setB):\n",
+    "    print(\"Sets are disjoint:\", setA.isdisjoint(setB))\n",
+    "\n",
+    "areDisjoint({1, 2}, {3, 4})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a7915ed3",
+   "metadata": {},
+   "source": [
+    "## Set Applications"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3cffb020",
+   "metadata": {},
+   "source": [
+    "### 16. Remove duplicates from a list using a set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "a74328ee",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "List without duplicates: [1, 2, 3, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def removeDuplicates(myList):\n",
+    "    uniqueList = list(set(myList))\n",
+    "    print(\"List without duplicates:\", uniqueList)\n",
+    "\n",
+    "removeDuplicates([1, 2, 2, 3, 1, 4])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a07e600f",
+   "metadata": {},
+   "source": [
+    "### 17. Convert a list to a set and back to a list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "a440d6e2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Converted back to list: [1, 2, 3, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def listToSetAndBack(myList):\n",
+    "    mySet = set(myList)\n",
+    "    newList = list(mySet)\n",
+    "    print(\"Converted back to list:\", newList)\n",
+    "\n",
+    "listToSetAndBack([1, 2, 3, 2, 4])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d9c6976e",
+   "metadata": {},
+   "source": [
+    "### 18. Find common elements in two lists using sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "1a96e93d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Common elements: [2, 3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def findCommonElements(listA, listB):\n",
+    "    common = set(listA) & set(listB)\n",
+    "    print(\"Common elements:\", list(common))\n",
+    "\n",
+    "findCommonElements([1, 2, 3], [2, 3, 4])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "63b0d15f",
+   "metadata": {},
+   "source": [
+    "### 19. Get elements in one list but not in another using sets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "98883427",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Unique to list A: [1, 3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def elementsOnlyInFirst(listA, listB):\n",
+    "    difference = set(listA) - set(listB)\n",
+    "    print(\"Unique to list A:\", list(difference))\n",
+    "\n",
+    "elementsOnlyInFirst([1, 2, 3], [2, 4])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "14bc7004",
+   "metadata": {},
+   "source": [
+    "### 20. Use set comprehension to generate a set (e.g., squares or primes)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "0a243ac1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Squares set: {1, 4, 9, 16, 25}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def generateSquaresSet(n):\n",
+    "    squares = {x * x for x in range(1, n + 1)}\n",
+    "    print(\"Squares set:\", squares)\n",
+    "\n",
+    "generateSquaresSet(5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b7022927",
+   "metadata": {},
+   "source": [
+    "## Forzen Set Programs"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c7081460",
+   "metadata": {},
+   "source": [
+    "### 21. Create and print a frozenset"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "77b3ad50",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Frozen set: frozenset({1, 2, 3, 4})\n"
+     ]
+    }
+   ],
+   "source": [
+    "def createFrozenSet():\n",
+    "    frozen = frozenset([1, 2, 3, 4])\n",
+    "    print(\"Frozen set:\", frozen)\n",
+    "\n",
+    "createFrozenSet()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
